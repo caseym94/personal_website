@@ -1,38 +1,32 @@
 {
-    "name": "personal_website",
-    "version": "1.0.0",
-    "description": "First website, document web development/art progression",
-    "main": "app.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/caseym94/personal_website"
-    },
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/caseym94/caseym94.github.io/issues"
-    },
-    "homepage": "https://github.com/caseym94/caseym94.github.io#readme",
-    "dependencies": {
-        "bcryptjs": "^2.4.3",
-        "body-parser": "^1.17.1",
-        "connect-flash": "^0.1.1",
-        "cookie-parser": "^1.4.3",
-        "ejs": "^2.5.6",
-        "express": "^4.15.2",
-        "express-handlebars": "^3.0.0",
-        "express-messages": "^1.0.1",
-        "express-session": "^1.15.1",
-        "express-validator": "^3.1.2",
-        "method-override": "^2.3.7",
-        "mongoose": "^4.8.6",
-        "pass": "^0.2.0",
-        "passport": "^0.3.2",
-        "passport-http": "^0.3.0",
-        "passport-local": "^1.0.0",
-        "passport-local-mongoose": "^4.0.0"
-    }
+  "name": "personal_website",
+  "version": "1.0.0",
+  "description": "imgs,videos,blogging",
+  "main": "app.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.17.1",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "express-handlebars": "^3.0.0",
+    "express-messages": "^1.0.1",
+    "express-session": "^1.15.2",
+    "express-validator": "^3.1.3",
+    "js-htmlencode": "^0.3.0",
+    "method-override": "^2.3.8",
+    "mongoose": "^4.9.4",
+    "pass": "^0.2.0",
+    "passport": "^0.3.2",
+    "passport-http": "^0.3.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^4.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
 }
