@@ -1,0 +1,12 @@
+<% include ../partials/header %>
+
+    <div class="BlogEditCell">
+        <h1> Write a new blog post!</h1>
+        <form action="/blog" method="POST">
+            <input type="text" placeholder="Title" name="title">
+            <textarea placeholder="Write stuff here" name="text"></textarea>
+            <button>Submit</button>
+        </form>
+    </div>
+
+    <% include ../partials/footer %>

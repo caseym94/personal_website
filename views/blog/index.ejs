@@ -1,0 +1,56 @@
+<% include ../partials/header %>
+
+    <div class="banner-img"></div>
+
+    <div class="contentContainer">
+        <div class="addNewBlogPost">
+            <a href="/blog/new"> Create a New Post! </a>
+        </div>
+        <% for(var i = article.length -1; i >= 0; i--){ %>
+
+            <article class="article">
+                <div class="editOrDeleteCell">
+                    <div>
+                        <a href="/blog/<%= article[i]._id %>/edit">
+                            <button class="buttonBlue">Edit</button>
+                        </a>
+                        <form action="/blog/<%= article[i]._id %>?_method=DELETE" method="POST">
+                            <button class="buttonRed">Delete</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="articleContentCell">
+
+                    <footer class="footertwo">
+
+                        Post added on
+                        <%= article[i].date %>
+
+                    </footer>
+                    <h1>
+                        <%= article[i].title %>
+                    </h1>
+
+                    <p>
+                        <%- article[i].text %>
+                            <a href="blog/<%= article[i]._id %>"> read more...</a>
+                    </p>
+
+                </div>
+
+                <!--   Article comment area-->
+                <div class="articleCommentCell">
+                    <h2>0 comment(s)</h2>
+                    <form action="/blog/<%= article[i]._id %>/comment" method="POST">
+                        <textarea name="text"></textarea>
+                        <button>Add Comment</button>
+                    </form>
+
+                </div>
+
+            </article>
+            <% } %>
+
+    </div>
+
+    <% include ../partials/footer %>

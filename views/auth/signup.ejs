@@ -1,0 +1,22 @@
+<% include ../partials/header %>
+
+    <div class="banner-padding"></div>
+
+    <form action="/Signup" method="POST" style="padding-top: 45px;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 10vh;
+                     text-align: center;">
+        <h1 style="font-size:30px; color: white;padding: 10px;">Sign Up</h1>
+        <input type="text" name="username" placeholder="Username" class="formInput" style="width:80%; height: 30px;font-size: 20px;    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 5px;margin: 5px;">
+        <input type="password" name="password" placeholder="Password" class="formInput" style="width:80%; height: 30px; font-size: 20px;    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 5px;margin: 5px;">
+        <button style="    font-size: 20px;
+    padding: 3px 10px;
+    border: 1px solid;">Submit</button>
+    </form>
+
+    <% include ../partials/footer %>

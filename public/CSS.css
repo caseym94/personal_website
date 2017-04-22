@@ -1,0 +1,534 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    font-family: cursive;
+    background: #3a3a3f;
+    background: linear-gradient(#3a3a3f, white);
+    background-attachment: fixed;
+    background-repeat: none;
+}
+
+.display {
+    display: inline-block;
+}
+
+.display-none {
+    display: none;
+}
+
+.bodyImg {
+    background-image: url("Assets/Images/Big/2016/7 July/ (13).jpeg");
+    background-size: auto;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+nav {
+    background: #3a3a3f;
+    background: #4a4a4f;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    font-size: 0;
+    top: 0;
+}
+
+nav ul {
+    margin: 0 2%;
+    display: inline-block;
+}
+
+nav .ul-right {
+    float: right;
+}
+
+.nav-options {
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    padding: 10px;
+    margin: 0 2%;
+    color: rgb(255, 244, 231);
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.nav-options span {
+    display: block;
+    background-color: aliceblue;
+    width: 25px;
+    height: 1px;
+    border: 2px solid #383840;
+}
+
+nav li {
+    list-style: none;
+    font-size: 23px;
+    padding: 10px;
+    color: rgb(255, 244, 231);
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    display: inline-block;
+}
+
+nav li:hover {
+    background: #fff4e7;
+    color: black;
+}
+
+nav li a {
+    color: inherit;
+}
+
+.active {
+    color: #baa8eb;
+    background-color: rgba(44, 41, 48, 0.64);
+}
+
+.logout {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: inherit;
+}
+
+
+/* banner-img used on index page */
+
+.banner-img {
+    background-image: URL("https://raw.githubusercontent.com/caseym94/caseym94.github.io/master/Public/Assets/Images/styling/(2).png");
+    animation: slide 220s linear infinite;
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin: 45px 0;
+    /*    offsets fixed navbar*/
+}
+
+@keyframes slide {
+    0% {
+        background-position: 0px 0%;
+    }
+    100% {
+        background-position: -2566.09px 0%;
+        filter: hue-rotate(360deg);
+    }
+}
+
+
+/* articles on main/show pages */
+
+.contentContainer {
+    margin-top: 50px;
+    padding: 0 3%;
+}
+
+.article {
+    margin-bottom: 60px;
+    border-radius: 20px;
+    padding: 30px;
+    color: black;
+    background-color: rgb(255, 244, 231);
+    background-color: rgb(255, 249, 243);
+    box-shadow: -5px 5px 13px 2px rgba(10, 12, 16, 0.48);
+}
+
+.articleContentCell {
+    word-wrap: break-word;
+    font-size: 22px;
+}
+
+.articleContentCell .img-container {
+    display: block;
+    padding: 20px;
+}
+
+.articleContentCell img {
+    border-radius: 20px;
+    height: 250px;
+    margin: 0 10px;
+    box-shadow: -14px 5px 13px 2px rgb(103, 72, 52);
+    transition: all .2s ease-in-out;
+}
+
+.articleContentCell img:hover {
+    box-shadow: -4px 3px 13px 0px rgb(103, 72, 52);
+}
+
+.articleContentCell h1 {
+    margin-bottom: 10px;
+    font-size: 40px;
+}
+
+.footertwo {
+    color: #393257;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+
+/*sketchbook timeline*/
+
+.TimelineBlur {
+    filter: blur(3px);
+    /* applied on click in js*/
+}
+
+.Timeline {
+    padding-top: 52px;
+    font-size: 0;
+    text-align: center;
+    overflow: hidden;
+    height: inherit;
+}
+
+.Timeline h2 {
+    font-size: 30px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    color: rgb(222, 222, 222);
+    font-family: fantasy;
+    width: 100%;
+}
+
+.footerone {
+    width: 100%;
+    display: block;
+    bottom: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.footerone p {
+    color: #69676f;
+    font-size: 17px;
+    text-align: center;
+}
+
+
+/*SKETCHBOOK PAGE STUFF*/
+
+.stopScroll {
+    overflow: hidden;
+}
+
+.stopScroll1 {
+    overflow: hidden;
+}
+
+.imgGrid {
+    display: flex;
+    overflow: overlay;
+    height: inherit;
+}
+
+.imgGrid-col {
+    /*    width: 33.33%;*/
+    width: 25%;
+    height: auto;
+    display: inline-block;
+    max-width: 500px;
+    /*    based on img width*/
+}
+
+.imgGrid-col img {
+    transition: all .2s ease-in-out;
+    opacity: 0;
+    width: 100%;
+    border: 1px solid black;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+
+/*            gallary display v2         */
+
+.trans {
+    opacity: 0;
+}
+
+.gallaryOuter {
+    background: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: .5s;
+}
+
+.ViewImgInfoContainer {
+    display: flex;
+    background: black;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.34);
+    border: 1px solid #919191;
+    background-size: cover;
+    margin-top: 45px;
+    overflow: hidden;
+    max-height: 85%;
+    max-width: 75%;
+    min-height: 400px;
+}
+
+.blackOverlay {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.ViewImgInfoContainer .blackOverlay img {
+    border: 1px solid #919191;
+    box-sizing: border-box;
+    max-width: 60%;
+    max-height: 100%;
+    float: left;
+}
+
+.imgContainer {
+    display: none;
+}
+
+.containerTextArea {
+    overflow: overlay;
+    height: 95%;
+    padding-right: 17px;
+    margin: 2.5% 0;
+}
+
+.textBox {
+    background: #fafafc;
+    background: rgb(133, 133, 133);
+    height: auto;
+    color: black;
+    font-size: 20px;
+    text-align: left;
+    border-radius: 10px;
+    width: 70%;
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    word-break: break-all;
+    padding: 20px;
+}
+
+.textBox h2,
+.textBox p {
+    color: black;
+    color: white;
+    font-size: 20px;
+}
+
+
+/* New Blog stuff */
+
+.articleCommentCell {
+    margin: 20px;
+}
+
+
+/*  # of comments display */
+
+.articleCommentCell h2 {
+    margin: 5px 0;
+    font-weight: 100;
+    color: #393257;
+    font-size: 15px;
+}
+
+.articleCommentCell form textarea {
+    font-size: 18px;
+    display: block;
+    width: 400px;
+    max-width: 100%;
+    height: 70px;
+    margin: 5px 0;
+    padding: 5px;
+    resize: none;
+}
+
+.articleCommentCell form button {
+    font-size: 16px;
+    padding: 3px;
+    margin: 5px 0;
+}
+
+.addNewBlogPost {
+    margin: 10px 0;
+    border-radius: 20px;
+}
+
+.addNewBlogPost a {
+    font-size: 23px;
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgb(255, 244, 231);
+    font-style: italic;
+}
+
+.editOrDeleteCell div {
+    float: right;
+}
+
+.editOrDeleteCell div button {
+    font-size: 20px;
+    height: 100%;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.editOrDeleteCell div .buttonRed {
+    background: red;
+}
+
+.editOrDeleteCell div form {
+    display: inline-block;
+}
+
+.editOrDeleteCell div .buttonBlue {
+    background: blue;
+}
+
+
+/* new/edit blog page */
+
+.BlogEditCell {
+    margin: 20vh;
+}
+
+.BlogEditCell h1 {
+    font-size: 30px;
+    color: rgb(255, 244, 231);
+    margin: 20px 0;
+    text-align: center;
+    font-weight: 100;
+}
+
+.BlogEditCell form {
+    background: #999696;
+    width: 80%;
+    overflow: hidden;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.BlogEditCell input {
+    width: 30%;
+    font-size: 20px;
+    margin: 10px 0;
+    padding: 3px 10px;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+.BlogEditCell textarea {
+    width: 100%;
+    display: block;
+    font-size: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    height: 200px;
+}
+
+.BlogEditCell button {
+    font-size: 20px;
+    background: white;
+    padding: 3px;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+.currentComments .comment {
+    border: 1px solid;
+    background: rgba(245, 222, 179, 0.48);
+    padding: 10px;
+    margin: 10px;
+    width: 50%;
+    word-wrap: break-word;
+}
+
+.currentComments .comment h2,
+.currentComments .comment p {
+    font-size: 20px;
+}
+
+.currentComments .comment p {
+    padding: 10px;
+}
+
+@media screen and (min-width: 630px) {
+    .nav-options {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    nav ul {
+        display: block;
+    }
+    nav .ul-right {
+        float: none;
+    }
+    nav li {
+        width: 100%;
+        display: none;
+    }
+    nav li:hover {
+        background: initial;
+        color: white;
+    }
+    #headerLoggedInWelcome {
+        display: none;
+    }
+    video {
+        width: 100%;
+    }
+    img {
+        width: 100%;
+    }
+    .articleContentCell img {
+        width: 100%;
+        height: auto;
+    }
+    .containerTextArea {
+        display: none;
+    }
+    .ViewImgInfoContainer {
+        display: inline-block;
+    }
+    .gallaryOuter {
+        display: initial;
+    }
+    .ViewImgInfoContainer .blackOverlay img {
+        max-height: 85%;
+        max-width: 99.5%;
+        width: auto;
+        height: auto;
+        left: 0;
+        position: absolute;
+    }
+}

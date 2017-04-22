@@ -1,0 +1,88 @@
+<% include ./Partials/header %>
+
+    <style>
+        body {
+            overflow: hidden;
+        }
+
+        .videoPageContainerCell {
+            background: rgba(0, 0, 0, 0.48);
+            height: calc(100% - 52px);
+            margin: 52px 0;
+        }
+
+        .mainVideoDisplay {
+            display: inline-block;
+            height: 100%;
+            width: 75%;
+        }
+
+        .mainVideoDisplay video {
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        .videoListDisplay {
+            float: right;
+            overflow-y: scroll;
+            display: inline-block;
+            height: 100%;
+            width: 25%;
+            border-left: 10px solid rgba(0, 0, 0, 0.33);
+            box-sizing: border-box;
+        }
+
+        .sideVideoCell {
+            border: 1px solid black;
+            box-sizing: border-box;
+            display: block;
+            height: 125px;
+            width: 100%;
+            overflow: hidden;
+            color: #ded9ce;
+        }
+
+        .sideVideoCell .videoImg {
+            background: blue;
+            width: 60%;
+            height: inherit;
+            display: inline-block;
+        }
+
+        .sideVideoCell .videoInformation {
+            width: 40%;
+            height: inherit;
+            float: right;
+        }
+
+        .sideVideoCell .videoInformation h2 {
+            font-size: 20px;
+            padding: 10px;
+        }
+    </style>
+
+    <div class="videoPageContainerCell">
+        <div class="mainVideoDisplay">
+            <video class="video" controls>
+                <source src="Assets/Vids/ (1).mp4" type="video/mp4" class="videoSrc">
+                <source src="Assets/Vids/ (1).ogg" type="video/ogg" class="videoSrc">
+            </video>
+        </div>
+        <div class="videoListDisplay">
+            <% for(var i = 0; i < videos.length; i++){ %>
+                <div class="sideVideoCell" name="<%= videos[i].link %>">
+                    <div class="videoImg"></div>
+                    <div class="videoInformation">
+                        <h2>
+                            <%= videos[i].title %>
+                        </h2>
+                    </div>
+                </div>
+
+
+
+                <% } %>
+        </div>
+    </div>
+    <% include ./Partials/footer %>

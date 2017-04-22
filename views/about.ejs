@@ -1,0 +1,169 @@
+<% include ./partials/header %>
+ <style>
+        #shop {
+            background-color: greenyellow;
+        }
+
+        #shop span {
+            color: black;
+        }
+
+        .animation {
+            background-repeat: repeat;
+            height: 100%;
+            width: 100%;
+            animation: slide 20s linear infinite;
+            position: fixed;
+        }
+
+        @keyframes slide {
+            0% {
+                background-position: 0px 0%;
+            }
+            100% {
+                background-position: 0 1500px;
+            }
+        }
+
+        .bigcontainer {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            background: linear-gradient(red, black);
+            font-size: 0;
+        }
+
+        .container2 {
+            height: 100%;
+            width: 20%;
+            overflow: hidden;
+            display: inline-grid;
+        }
+
+        .animation0,
+        .animation1,
+        .animation2,
+        .animation3 {
+            background-image: url("https://raw.githubusercontent.com/caseym94/caseym94.github.io/master/Public/Assets/Images/styling/(1).png");
+            background-repeat: repeat;
+            width: 100%;
+            animation: animate1 200s linear infinite;
+            display: inline-grid;
+            background-size: 25%;
+        }
+
+        .animation2 {
+            background-size: 50%;
+        }
+
+        .animation3 {
+            background-size: 100%;
+        }
+
+        .x {
+            animation: animate2 200s linear infinite;
+        }
+
+        @keyframes animate1 {
+            0% {
+                background-position: 0px 0%;
+            }
+            100% {
+                background-position: 0 -9000px;
+            }
+        }
+
+        @keyframes animate2 {
+            0% {
+                background-position: 0px 0%;
+            }
+            100% {
+                background-position: 0 9000px;
+            }
+        }
+
+        .box {
+            height: auto;
+            width: auto;
+        }
+
+        .smallbox {
+            margin: 100px;
+            height: 500px;
+            width: 70%;
+            background-color: #171c17;
+            margin: auto;
+            border-radius: 20px;
+        }
+    </style>
+    <div class="bigcontainer" style="position:fixed;z-index:-2;">
+
+        <div class="container2">
+            <div class="animation0">
+                <div class="animation1 x">
+                    <div class="animation2">
+                        <div class="animation3 x"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container2">
+            <div class="animation0 x">
+                <div class="animation1">
+                    <div class="animation2 x">
+                        <div class="animation3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container2">
+            <div class="animation0">
+                <div class="animation1 x">
+                    <div class="animation2">
+                        <div class="animation3 x"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container2">
+            <div class="animation0 x">
+                <div class="animation1">
+                    <div class="animation2 x">
+                        <div class="animation3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container2">
+            <div class="animation0">
+                <div class="animation1 x">
+                    <div class="animation2">
+                        <div class="animation3 x"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div style="height:90px;"></div>
+
+    <div class="box">
+        <div class="smallbox"></div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <% include ./partials/footer %>

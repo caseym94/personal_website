@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>
+    </title>
+
+    <link rel="stylesheet" type="text/css" href="/CSS.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+
+            <ul class="ul-left">
+                <li class="li-left">
+                    <a href="/blog">
+                    
+                        Blog
+                   
+                    </a>
+                </li>
+                <li class="li-left">
+                    <a href="/SketchBook">
+                        
+                        SketchBook
+                       
+                    </a>
+                </li>
+                <li class="li-left">
+                    <a href="/Videos">
+                        
+                        Videos
+                       
+                    </a>
+                </li>
+                <li class="li-left">
+                    <a href="/About">
+                        
+                        About
+                       
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="ul-right">
+                <% if(!currentUser){ %>
+                    <li class="li-right">
+                        <a href="/Signup">
+                            
+                            Sign up
+                           
+                        </a>
+                    </li>
+                    <li class="li-right">
+                        <a href="/Login">
+                            
+                            
+                            Login
+                           
+                        </a>
+                    </li>
+                    <% }else{ %>
+                        <li class="li-right">
+                            <form action="/logout" method="GET">
+                                <button class="logout">
+
+                                    Sign out
+
+                                </button>
+                            </form>
+
+                        </li>
+                        <li class="li-right" id="headerLoggedInWelcome">
+
+                            Welcome
+                            <%= currentUser.username %>!
+
+                        </li>
+
+                        <% } %>
+            </ul>
+            <button class="nav-options">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>

@@ -1,0 +1,66 @@
+<% include ../partials/header %>
+
+    <div class="banner-img"></div>
+
+
+    <div class="contentContainer">
+
+        <article class="article">
+            <div class="editOrDeleteCell">
+                <div>
+                    <a href="/blog/<%=article._id %>/edit">
+                        <button class="buttonBlue">Edit</button>
+                    </a>
+                    <form action="/blog/<%= article._id %>?_method=DELETE" method="POST">
+                        <button class="buttonRed">Delete</button>
+                    </form>
+                </div>
+            </div>
+            <div class="articleContentCell">
+
+                <footer class="footertwo">
+
+                    Post added on
+                    <%= article.date %>
+
+
+                </footer>
+                <h1>
+                    <%= article.title %>
+                </h1>
+
+
+                <p>
+                    <%- article.text %>
+                </p>
+
+            </div>
+
+            <!--   Article comment area-->
+            <!--   Article comment area-->
+            <div class="articleCommentCell">
+                <h2>0 comment(s)</h2>
+                <form action="/blog/<%= article._id %>/comment" method="POST">
+                    <textarea name="text"></textarea>
+                    <button>Add Comment</button>
+                </form>
+                <div class="currentComments">
+                    <% article.comments.forEach(function(comment){ %>
+                        <div class="comment">
+                            <h2>
+                                <%= comment.author.username %>
+                            </h2>
+                            <p>
+                                <%= comment.text %>
+                            </p>
+                        </div>
+                        <% }); %>
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+    <% include ../partials/footer %>

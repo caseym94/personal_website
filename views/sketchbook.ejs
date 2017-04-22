@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+
+
+    <title>
+        SketchBook
+    </title>
+
+    <link rel="stylesheet" type="text/css" href="CSS.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+
+
+    </style>
+
+</head>
+<!--  x[0]-->
+
+<body class="x stopScroll1" data-name="sketchbook">
+
+
+    <header>
+
+        <nav>
+
+            <ul class="ul-left">
+                <li class="li-left">
+                    <a href="/blog">
+                    
+                        Blog
+                   
+                    </a>
+                </li>
+                <li class="li-left">
+                    <a href="/SketchBook">
+                        
+                        SketchBook
+                       
+                    </a>
+                </li>
+                <li class="li-left">
+                    <a href="/Videos">
+                        
+                        Videos
+                       
+                    </a>
+                </li>
+                <li class="li-left">
+                    <a href="/About">
+                        
+                        About
+                       
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="ul-right">
+                <% if(!currentUser){ %>
+                    <li class="li-right">
+                        <a href="/Signup">
+                            
+                            Sign up
+                           
+                        </a>
+                    </li>
+                    <li class="li-right">
+                        <a href="/Login">
+                            
+                            
+                            Login
+                           
+                        </a>
+                    </li>
+                    <% }else{ %>
+                        <li class="li-right">
+                            <form action="/logout" method="GET">
+                                <button class="logout">
+
+                                    Sign out
+
+                                </button>
+                            </form>
+
+                        </li>
+                        <li class="li-right" id="headerLoggedInWelcome">
+
+                            Welcome
+                            <%= currentUser.username %>!
+
+                        </li>
+
+                        <% } %>
+            </ul>
+            <button class="nav-options">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <div class="x trans">
+        <div class="x display-none">
+            <div class="blackOverlay">
+                <!--  x[2]-->
+                <img class="x imgContainer" />
+                <!--  x[3]-->
+                <div class="x">
+                    <!--  x[4]-->
+                    <div class="x">
+                        <h2>User2212</h2>
+                        <p>asddasdasasdasdasdasddasdasasdasdasdasddasdasasdasdasdasddasdasasdasdasdasddasdasasdasdasdasddasdasasdasdasdasddasdasasdasdasdasddasdasasdasdasdasddasdasasdasdasdasddasdasasdasdasdasddasdasasdasdasdasddasdasasdasdasdasddasdasasdasdasdasddasdasasdasdasdasddasdasasdasdasd</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  x[5]-->
+    <div class="Timeline">
+
+
+        <div class="imgGrid x">
+
+            <div class="imgGrid-col">
+                <% for(var i = 0; i < img.length; i+=4 ){  %>
+
+                    <img src="<%= img[i].small %>" name="<%= img[i].medium %>">
+
+                    <% } %>
+            </div>
+            <div class="imgGrid-col">
+                <% for(var i = 1; i < img.length; i+=4 ){  %>
+
+                    <img src="<%= img[i].small %>" name="<%= img[i].medium %>">
+
+                    <% } %>
+            </div>
+            <div class="imgGrid-col">
+                <% for(var i = 2; i < img.length; i+=4 ){  %>
+
+                    <img src="<%= img[i].small %>" name="<%= img[i].medium %>">
+
+                    <% } %>
+            </div>
+            <div class="imgGrid-col">
+                <% for(var i = 3; i < img.length; i+=4 ){  %>
+
+                    <img src="<%= img[i].small %>" name="<%= img[i].medium %>">
+
+                    <% } %>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+    <% include ./Partials/footer %>

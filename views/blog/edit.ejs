@@ -1,0 +1,14 @@
+<% include ../partials/header %>
+
+    <div class="BlogEditCell">
+        <h1>Edit blog post</h1>
+        <form action="/blog/<%= article._id %>?_method=PUT" method="POST">
+            <input type="text" placeholder="Title" name="title" value="<%= article.title %>">
+            <textarea placeholder="Write stuff here" name="text">
+                <%= article.text %>
+            </textarea>
+            <button>Submit</button>
+        </form>
+    </div>
+
+    <% include ../partials/footer %>
